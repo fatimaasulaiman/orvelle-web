@@ -1,0 +1,1031 @@
+
+/* ==========================================
+   ORVELLE WEB
+   Quiet luxury · Minimal · Editorial
+========================================== */
+
+:root {
+  --ivory: #F7F3EE;
+  --espresso: #29231F;
+  --taupe: #8B7766;
+  --beige: #D8CBBE;
+  --white: #FFFFFF;
+  --light-beige: #EDE5DC;
+  --border: rgba(41, 35, 31, 0.15);
+
+  --heading-font: "Cormorant Garamond", serif;
+  --body-font: "DM Sans", sans-serif;
+
+  --page-width: 1240px;
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--espresso);
+  font-family: var(--body-font);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+p {
+  color: var(--taupe);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: clamp(3.4rem, 7vw, 6.5rem);
+}
+
+h2 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+}
+
+em {
+  font-weight: 400;
+}
+
+.section {
+  padding: 110px max(6%, calc((100% - var(--page-width)) / 2));
+}
+
+.eyebrow {
+  color: var(--taupe);
+  font-family: var(--body-font);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1.8;
+}
+
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 82px;
+  padding: 0 6%;
+  border-bottom: 1px solid var(--border);
+  background: rgba(247, 243, 238, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.logo {
+  flex-shrink: 0;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.logo span {
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.nav a {
+  color: var(--taupe);
+  font-size: 0.73rem;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--espresso);
+}
+
+.nav .nav-contact {
+  padding: 11px 18px;
+  border: 1px solid var(--espresso);
+  color: var(--espresso);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav .nav-contact:hover {
+  background: var(--espresso);
+  color: var(--white);
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--espresso);
+  font-size: 1.35rem;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 650px;
+  padding: 100px 8% 85px;
+  overflow: hidden;
+}
+
+.hero > .eyebrow {
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  color: var(--taupe);
+}
+
+.hero-copy {
+  max-width: 490px;
+  margin-bottom: 32px;
+  font-size: 0.93rem;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 13px 23px;
+  border: 1px solid var(--espresso);
+  font-size: 0.75rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.button-dark {
+  background: var(--espresso);
+  color: var(--white);
+}
+
+.button-dark:hover {
+  background: transparent;
+  color: var(--espresso);
+}
+
+.button-light {
+  background: transparent;
+  color: var(--espresso);
+}
+
+.button-light:hover {
+  background: var(--espresso);
+  color: var(--white);
+}
+
+.text-link {
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--beige);
+  color: var(--espresso);
+  font-size: 0.76rem;
+  transition: border-color 0.2s ease;
+}
+
+.text-link:hover {
+  border-color: var(--espresso);
+}
+
+.hero-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 70px;
+}
+
+.hero-note span {
+  color: var(--taupe);
+  font-size: 0.63rem;
+  letter-spacing: 0.12em;
+}
+
+/* SELECTED WORK */
+
+.work {
+  background: var(--white);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 15px;
+}
+
+.section-heading h2 em {
+  color: var(--taupe);
+}
+
+.section-heading > p {
+  max-width: 310px;
+  font-size: 0.82rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  display: block;
+  min-width: 0;
+  color: var(--espresso);
+}
+
+.project-image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 360px;
+  aspect-ratio: 3 / 4;
+  padding: 22px;
+  overflow: hidden;
+  background-color: var(--light-beige);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.project-image::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(41, 35, 31, 0.08) 0%,
+    transparent 35%,
+    rgba(41, 35, 31, 0.55) 100%
+  );
+  content: "";
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image::before {
+  opacity: 0.8;
+}
+
+/* PROJECT PHOTOGRAPHS */
+
+/* Hatiç Haus — modest fashion */
+
+/* Hatiç Haus — actual brand image */
+.fashion-image {
+  background-image: url("images/hatichaus.png");
+  background-color: #E8D7C3;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Zee Beddings & More — home and bedding */
+
+/* Zee Beddings & More — bedding and home lifestyle */
+.lifestyle-image {
+  background-image: url("https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=85");
+  background-color: #56422d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* CareerPath AI — technology and career planning */
+
+/* CareerPath AI — technology and career planning */
+.beauty-image {
+  background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85");
+  background-color: #EAF0F7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* TEXT ON PROJECT PHOTOS */
+
+.image-label {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  color: var(--white);
+  font-family: var(--body-font);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.mock-brand {
+  position: absolute;
+  top: 22px;
+  right: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mock-brand > span {
+  font-family: var(--heading-font);
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.mock-brand small {
+  margin-top: 7px;
+  font-size: 0.48rem;
+  letter-spacing: 0.14em;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 18px;
+}
+
+.project-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.project-info p {
+  font-size: 0.73rem;
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: var(--taupe);
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover .arrow {
+  transform: translate(4px, -4px);
+}
+
+.concept-note {
+  margin-top: 35px;
+  font-size: 0.72rem;
+}
+
+/* SERVICES */
+
+.services > .eyebrow {
+  margin-bottom: 16px;
+}
+
+.services > h2 em {
+  color: var(--taupe);
+}
+
+.service-list {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 50px minmax(200px, 1fr) minmax(150px, 0.8fr) 25px;
+  align-items: center;
+  gap: 22px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-item > span:first-child {
+  color: var(--taupe);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.service-item h3 {
+  font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+}
+
+.service-item p {
+  font-size: 0.8rem;
+}
+
+.service-item > span:last-child {
+  color: var(--taupe);
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.service-item:hover > span:last-child {
+  transform: translate(4px, -4px);
+}
+
+/* SERVICES INTRO AND PRICING */
+
+.services-intro {
+  max-width: 580px;
+  margin-top: 22px;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.service-item > span:last-child {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pricing-note {
+  margin-top: 42px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.pricing-note .eyebrow {
+  margin-bottom: 14px;
+}
+
+.pricing-note p:not(.eyebrow) {
+  padding: 7px 0;
+  font-size: 0.82rem;
+}
+
+.pricing-disclaimer {
+  max-width: 700px;
+  margin-top: 22px;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.pricing-cta {
+  margin-top: 24px;
+}
+
+@media (max-width: 650px) {
+  .pricing-note {
+    padding: 22px;
+  }
+
+  .service-item > span:last-child {
+    font-size: 0.72rem;
+  }
+}
+
+/* ABOUT */
+
+.about {
+  background: var(--light-beige);
+}
+
+.about > .eyebrow {
+  margin-bottom: 20px;
+}
+
+.about h2 {
+  max-width: 780px;
+  margin-bottom: 28px;
+}
+
+.about h2 em {
+  color: var(--taupe);
+}
+
+.about > p:not(.eyebrow) {
+  max-width: 650px;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+  line-height: 1.95;
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+}
+
+.contact > .eyebrow {
+  margin-bottom: 22px;
+}
+
+.contact h2 {
+  max-width: 800px;
+  margin: 0 auto 24px;
+}
+
+.contact h2 em {
+  color: var(--taupe);
+}
+
+.contact > p:not(.eyebrow) {
+  max-width: 470px;
+  margin: 0 auto 30px;
+  font-size: 0.88rem;
+}
+
+.contact .contact-note {
+  margin-top: 22px !important;
+  font-size: 0.68rem !important;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 28px 6%;
+  border-top: 1px solid var(--border);
+}
+
+.footer .logo {
+  font-size: 1.7rem;
+}
+
+.footer p {
+  font-size: 0.7rem;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 5%;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 0.68rem;
+  }
+
+  .hero {
+    min-height: 570px;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .section {
+    padding: 85px 6%;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 20px;
+  }
+
+  .project-image {
+    min-height: 0;
+  }
+
+  .service-item {
+    grid-template-columns: 35px minmax(0, 1fr) minmax(0, 0.9fr) 20px;
+    gap: 15px;
+  }
+}
+
+/* MOBILE NAVIGATION AND LAYOUT */
+
+@media (max-width: 650px) {
+  .header {
+    min-height: 72px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 6% 22px;
+    border-bottom: 1px solid var(--border);
+    background: var(--ivory);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.82rem;
+  }
+
+  .nav .nav-contact {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid var(--espresso);
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 85px 6% 65px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.1rem, 12vw, 4.5rem);
+  }
+
+  .hero-copy {
+    font-size: 0.87rem;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-note {
+    gap: 12px 20px;
+    margin-top: 45px;
+  }
+
+  .hero-note span {
+    font-size: 0.58rem;
+  }
+
+  .section {
+    padding: 72px 6%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .section-heading > p {
+    max-width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .project-image {
+    aspect-ratio: 4 / 4.5;
+  }
+
+  .mock-brand > span {
+    font-size: 2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .service-list {
+    margin-top: 35px;
+  }
+
+  .service-item {
+    grid-template-columns: 30px minmax(0, 1fr) 20px;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .service-item h3 {
+    font-size: 1.65rem;
+  }
+
+  .service-item p {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 2px;
+  }
+
+  .service-item > span:last-child {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .about h2,
+  .contact h2 {
+    font-size: clamp(2.6rem, 10vw, 3.7rem);
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px 6%;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2.85rem;
+  }
+
+  .hero-note {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-info h3 {
+    font-size: 1.55rem;
+  }
+}
+
+/* ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--taupe);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* PRICING LAYOUT REFINEMENTS */
+
+.service-item h3 {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+  .service-item {
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .service-item > span:last-child {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    padding-top: 8px;
+  }
+
+  .service-item p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .pricing-cta {
+    width: 100%;
+  }
+}
+
+/* ORVELLE WEB — CLIENT ENQUIRY FORM */
+
+.enquiry-form {
+  max-width: 680px;
+  margin: 64px auto 0;
+  padding: 42px;
+  background: #F7F3EE;
+  border: 1px solid #D8CBBE;
+  text-align: left;
+}
+
+.enquiry-form h3 {
+  margin-bottom: 10px;
+  color: #29231F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.enquiry-form > p {
+  margin-bottom: 30px;
+  color: #8B7766;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+#enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#enquiry-form label {
+  margin-top: 12px;
+  color: #29231F;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+#enquiry-form input,
+#enquiry-form select,
+#enquiry-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 16px;
+  border: 1px solid #D8CBBE;
+  border-radius: 2px;
+  background: #FFFFFF;
+  color: #29231F;
+  font: inherit;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  transition: border-color 0.2s ease;
+}
+
+#enquiry-form input::placeholder,
+#enquiry-form textarea::placeholder {
+  color: #A39589;
+}
+
+#enquiry-form input:focus,
+#enquiry-form select:focus,
+#enquiry-form textarea:focus {
+  outline: none;
+  border-color: #8B7766;
+}
+
+#enquiry-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#enquiry-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 17px 20px;
+  border: 1px solid #29231F;
+  border-radius: 2px;
+  background: #29231F;
+  color: #FFFFFF;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#enquiry-form button:hover {
+  background: #8B7766;
+  border-color: #8B7766;
+}
+
+@media (max-width: 600px) {
+  .enquiry-form {
+    margin-top: 40px;
+    padding: 25px 20px;
+  }
+
+  #enquiry-form input,
+  #enquiry-form select,
+  #enquiry-form textarea {
+    padding: 13px 12px;
+    font-size: 16px;
+  }
+
+  #enquiry-form button {
+    padding: 16px 12px;
+  }
+}
+
+/* ORVELLE WEB — MOBILE NAVIGATION & HERO */
+
+@media (max-width: 650px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Keep the header from feeling crowded */
+  header {
+    max-width: 100%;
+  }
+
+  nav {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Keep hero content within the phone screen */
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 11vw, 4rem);
+    line-height: 1.05;
+    overflow-wrap: break-word;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .hero .button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Prevent wide elements from overflowing */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+}
